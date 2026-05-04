@@ -222,6 +222,8 @@ for k = 1:size(pairs,1)
     SH_contact_pinion(k) = (sigma_c_all_pinion(k) / sigma_c(k))^2;
     SH_contact_gear(k)   = (sigma_c_all_gear(k)   / sigma_c(k))^2;
 end
+% Contact Stress divided by gear ratio
+SH_contact_pinion = SH_contact_pinion * .625; 
 
 %% ============================================================
 % PRINT RESULTS
